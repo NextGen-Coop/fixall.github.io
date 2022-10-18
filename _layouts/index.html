@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
-  {% include head.html %}
+  {%- include head.html -%}
   <body>
-    {% include header.html %}
+    {%- comment -%}
+    {%- include header.html -%}
+    {%- endcomment -%}
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        {% include slideshow.html %}
-        {% include cta.html %}
-        {% include contact.html %}
+        {%- include splash.html image="logo.png" -%}
+        {%- include cta.html -%}
+        {%- include contact.html -%}
       </div>
     </main>
-    {% include footer.html %}
+    {%- include footer.html -%}
   </body>
 </html>
