@@ -29,6 +29,17 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
 github_username: nextgen-coop
 
+## Collections ##
+# collections_dir points to the directory collections will live.
+collections_dir: collections
+
+# collections lists each collection and sets options for each one.
+# output: true is required if pages need to be rendered for each item.
+collections:
+  permalink: /:collection/:name
+  projects:
+    output: true
+
 # Build settings
 theme: minima
 plugins:
