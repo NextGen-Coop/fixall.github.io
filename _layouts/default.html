@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
-  {% include head.html %}
+  {%- include head.html -%}
   <body>
-    {% include header.html %}
+    {%- include header.html -%}
     <main aria-label="Content" class="page">
       <div class="wrapper">
-        {% comment %}
-          {% include breadcrumbs.html %}
-        {% endcomment %}
+        {%- comment -%}
+          {%- include breadcrumbs.html -%}
+        {%- endcomment -%}
         {{ content }}
       </div>
     </main>
-    {% include footer.html %}
+    {%- include footer.html -%}
   </body>
 </html>
