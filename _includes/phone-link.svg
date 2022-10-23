@@ -1,0 +1,15 @@
+{%- assign phone = include.phone -%}
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path id="phone-curve" fill="transparent" stroke="none"
+    d="m 31.233725,31.233725 c 0,0 61.574343,63.73891 168.766275,63.73891 121.84084,0 168.76627,-63.73891 168.76627,-63.73891" />
+
+  <text class="curved-link">
+    <textPath xlink:href="#phone-curve" side="left" startOffset="5">
+      <a class="phone-link" xlink:href="tel:{{ phone }}">
+        {{ phone | remove_first: "1-" }}
+      </a>
+    </textPath>
+  </text>
+</svg>

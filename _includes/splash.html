@@ -2,5 +2,10 @@
 <section class="splash">
   <img src="{{ path | prepend: "/assets/img/" | relative_url }}"
     alt="Fix-All Services" />
+  {%- if site.phone -%}
+  <div class="phone-link-wrapper">
+    {%- include phone-link.svg phone= site.phone -%}
+  </div>
+  {%- endif -%}
   <h1>{{ site.title }}</h1>
 </section>
