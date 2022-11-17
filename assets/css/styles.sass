@@ -30,8 +30,47 @@ ul, ol
   margin: 0
 
 header
+  height: 100%
+  width: 100%
+  margin: 0
   .wrapper
-    max-width: calc(1280px - (30px * 2))
+    width: 100%
+    height: 75%
+    margin: 0
+    background: url(/assets/img/logo.png)
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: center 0
+    .header-title
+      position: relative
+      width: 100%
+      margin: 0 auto
+      top: 50%
+      font-family: 'Stick', sans-serif
+      font-size: 8vw
+      text-align: center
+      color: $fixall_black
+      border-top: 10px solid $fixall_black
+      border-bottom: 10px solid $fixall_black
+      a
+        color: $fixall_black
+        text-decoration: none
+        &:hover
+          color: yellow
+    .phone-link-wrapper
+      margin: 0 auto
+      width: 40%
+      position: relative
+      top: 70%
+      text.curved-link
+        font-family: $font_archdau
+        fill: $fixall_red
+        font-size: 5.25vh
+        letter-spacing: 6px
+        &:hover
+          fill: yellow
+        a
+          text-decoration: none
   .site-nav
     .trigger
       display: flex
@@ -42,43 +81,7 @@ header
       .menu-link
         padding: 0 20px
   flex-shrink: 0
-  background: rgb(255,255,255)
-  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(238,238,238,1) 25%, rgba(238,238,238,1) 100%)
-  color: red
-  box-shadow: 5px 0 10px black
-
-.site-header
-  min-height: 70px
-
-.site-title, .site-title:visited
-  display: block
-  font-family: serif
-  text-transform: uppercase
-  color: red
-  line-height: 0.5
-  .background-text
-    position: inherit
-    font-family: sans-serif
-    font-size: 6em
-    top: 5vh
-    padding-left: 1vw
-  .main-text
-    position: inherit
-    background-color: $lightish
-    color: $fixall_black
-    line-height: 1
-    padding: 5px
-    top: 65px
-    font-size: 70%
-    font-weight: 500
-    letter-spacing: 1px
-  .sub-text
-    position: inherit
-    background-color: $lightish
-    font-size: 60%
-    line-height: 2
-    padding: 5px
-    top: 90px
+  //box-shadow: 5px 0 10px black
 
 main
   flex: 1 0 auto
@@ -86,31 +89,6 @@ main
     width: 100%
     margin: 0
     //max-width: calc(1024px - (15px * 2))
-
-.splash
-  width: 100%
-  height: 100%
-  margin: 0
-  img
-    width: auto
-    height: auto
-    max-width: 100%
-    max-height: 90%
-  .phone-link-wrapper
-    margin: 0 auto
-    width: 40%
-    position: relative
-    top: -4vw
-    left: -1vh
-    text.curved-link
-      font-family: $font_archdau
-      fill: $fixall_red
-      font-size: 5.25vh
-      letter-spacing: 8px
-      &:hover
-        fill: yellow
-      a
-        text-decoration: none
 
   h1
     font-family: 'Stick', sans-serif
