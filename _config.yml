@@ -20,6 +20,9 @@
 
 title: Fix-All
 
+# Versioning in case Github Actions supports it.
+version: 0.1.0
+
 description: >- # this means to ignore newlines until "baseurl:"
   Fix-All is your one stop shop for everything home repair. HVAC, plumbing,
   electrical and structure repair are a few of the services we offer. Obviously
