@@ -5,9 +5,11 @@ $img_width: calc(300px - (10px * 2))
 $overlay_color: rgba(102, 127, 255, 0.75)
 $fixall_brown: rgba(166, 156, 135, 1)
 $fixall_black: rgba(26, 15, 8, 1)
+$fixall_white: rgba(233, 224, 180, 1)
 $fixall_red: rgba(121, 82, 65, 1)
 $lightish: #eee
 
+@import minima
 @import fonts
 @import breakpoints
 
@@ -19,7 +21,6 @@ html
 body
   background-color: $fixall_brown
   width: 100%
-  height: 100%
   margin: 0
   display: flex
   flex-flow: column nowrap
@@ -33,24 +34,31 @@ header
   height: 100%
   width: 100%
   margin: 0
+  background: url(/assets/img/bg/wood.png)
+  background-size: cover
   .wrapper
-    display: flex
-    width: 100%
+    max-width: calc(1200px - (30px * 2))
     margin: 0
     .header-logo
+      float: left
       .boudreaux-text
         font-family: $font_script
         font-size: 3vw
         letter-spacing: -1
       a.header-title
+        display: flex
+        align-items: center
         position: relative
         font-family: $font_stick
         font-size: 3vw
         text-decoration: none
         p
-          color: $fixall_black
+          color: $fixall_white
+          margin: 0 2vw
+          font-size: 8vw
+          text-shadow: 3px 0px 7px $fixall_black
         img
-          width: 40%
+          width: 25%
       .phone-link-wrapper
         margin: 0 auto
         width: 40%
@@ -66,7 +74,19 @@ header
           a
             text-decoration: none
   .site-nav
-    flex-shrink: 1
+    float: right
+    .menu-link
+      display: inline
+      margin: 0 10px
+    .page-link
+      color: $fixall_white
+    a:hover
+      color: white
+      text-decoration: none
+    .nav-trigger
+      display: none
+    label
+      cursor: pointer
 
 main
   flex: 1 0 auto
@@ -76,9 +96,9 @@ main
     //max-width: calc(1024px - (15px * 2))
 
   h1
-    font-family: 'Stick', sans-serif
-    font-size: 8vw
-    color: $fixall_black
+    font-family: $font_orbitron
+    font-size: 3vw
+    color: $fixall_white
 
 .collection-list
   ul
@@ -104,6 +124,11 @@ main
         padding: 20px 0
         text-align: center
 
+.site-header
+  border-bottom: 5px solid $fixall_black
+  box-shadow: 0px 3px 7px $fixall_black
+  padding: 1.75vh 0
+
 .site-footer
   flex-shrink: 0
   bottom: 0
@@ -119,6 +144,10 @@ main
         width: 32px
         height: 32px
         filter: invert(100%)
+      .address-block
+        display: inline-block
+        line-height: 0.5vh
+        vertical-align: text-top
   .footer-col-wrapper
     color: lightgrey
     display: flex

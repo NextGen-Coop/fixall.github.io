@@ -7,27 +7,29 @@
   <h4>Get In Touch</h4>
   <ul>
     {%- if contact.address -%}
-    <li><img src="{{ location_icon | relative_url }}" alt="location" />
-      {{ contact.address }}
-      {%- if contact.city -%}
-        {{ contact.city }}, {{ contact.state }} {{ contact.zip }}
-      {%- endif -%}
-    </li>
+      <li><img src="{{ location_icon | relative_url }}" alt="location" />
+        <div class="address-block">
+          <p>{{ contact.address }}</p>
+          {%- if contact.city -%}
+            <p>{{ contact.city }}, {{ contact.state }} {{ contact.zip }}</p>
+          {%- endif -%}
+        </div>
+      </li>
     {%- endif -%}
     {%- if contact.telephone -%}
-    <li><img src="{{ phone_icon | relative_url }}" alt="telephone" />
-      <a href="tel:{{ contact.telephone }}">{{ contact.telephone }}</a>
-    </li>
+      <li><img src="{{ phone_icon | relative_url }}" alt="telephone" />
+        <a href="tel:{{ contact.telephone }}">{{ contact.telephone }}</a>
+      </li>
     {%- endif -%}
     {%- if contact.mobile -%}
-    <li><img src="{{ mobile_icon | relative_url }}" alt="mobile" />
-      <a href="tel:{{ contact.mobile }}">{{ contact.mobile }}</a>
-    </li>
+      <li><img src="{{ mobile_icon | relative_url }}" alt="mobile" />
+        <a href="tel:{{ contact.mobile }}">{{ contact.mobile }}</a>
+      </li>
     {%- endif -%}
     {%- if contact.fax -%}
-    <li><img src="{{ fax_icon | relative_url }}" alt="fax" />
-      {{ contact.fax }}
-    </li>
+      <li><img src="{{ fax_icon | relative_url }}" alt="fax" />
+        {{ contact.fax }}
+      </li>
     {%- endif -%}
   </ul>
 </div>

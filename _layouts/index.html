@@ -6,7 +6,14 @@
     {%- include header.html -%}
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>Content blocks here</p>
+        <div class="flex">
+          {%- include hvac.html -%}
+          {%- include plumbing.html -%}
+          {%- include electrical.html -%}
+          {%- include repair.html -%}
+          {%- include home-inspection.html -%}
+        </div>
+        {%- include cta.html -%}
       </div>
     </main>
     {%- include footer.html -%}
