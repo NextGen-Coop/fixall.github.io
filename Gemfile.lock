@@ -19,7 +19,7 @@ GEM
       simpleidn (~> 0.2.1)
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
-      http_parser.rb
+      http_parser.rb (~> 0)
     ethon (0.16.0)
       ffi (>= 1.15.0)
     eventmachine (1.2.7)
